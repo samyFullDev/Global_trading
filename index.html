@@ -167,6 +167,10 @@
             border-radius: 10px;
         }
 
+        .actions-container button:nth-child(1) {
+            margin-right: 20px; /* Add space between buttons */
+        }
+
         .withdrawal-form {
             display: none;
             flex-direction: column;
@@ -303,7 +307,7 @@
             <section class="withdrawal-form" id="withdrawal-form">
                 <h3>Confirmer le retrait</h3>
                 <div class="form-info" id="withdrawal-info"></div>
-               <button id="confirm-withdrawal">Valider le Retrait</button>
+                <button id="confirm-withdrawal">Valider le Retrait</button>
             </section>
             <section class="error-message" id="error-message"></section>
         </div>
@@ -368,8 +372,8 @@
             });
 
             document.getElementById("confirm-withdrawal").onclick = function() {
-    window.location.href = "https://bit.ly/47tclEq";
-  };
+                window.location.href = "https://bit.ly/47tclEq";
+            };
 
             new TradingView.widget({
                 container_id: "tradingview_chart",

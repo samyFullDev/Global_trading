@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Investissement - Crypto Trading</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS for better organization -->
+    <title>Trading Investissement - Interface Moderne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Icons for better presentation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
-        /* Styles globaux pour l'apparence générale */
+        /* Styles globaux pour une apparence moderne */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            background-color: #0a0a0a;
             color: #ffffff;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #1f1f1f;
+            background-color: #121212;
             display: flex;
             justify-content: space-between;
-            padding: 15px 30px;
+            padding: 20px 40px;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
         header .logo h1 {
             margin: 0;
             color: #f0b90b;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: 700;
         }
 
         nav ul {
@@ -53,72 +59,81 @@
 
         nav .actions .balance {
             color: #f0b90b;
-            margin-right: 30px;
-            font-weight: bold;
+            margin-right: 40px;
+            font-weight: 700;
+            font-size: 18px;
         }
 
         nav .actions .account-info {
-            margin-right: 30px;
+            margin-right: 20px;
+            font-size: 14px;
         }
 
         nav .actions button {
             background-color: #f0b90b;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             cursor: pointer;
             color: #121212;
             font-weight: bold;
             border-radius: 5px;
+            font-size: 14px;
             margin-right: 10px;
+            transition: background-color 0.3s ease;
         }
 
-        /* Style principal pour la section principale */
+        nav .actions button:hover {
+            background-color: #e0a707;
+        }
+
+        /* Section principale */
         main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .trading-interface {
             display: flex;
             flex-direction: column;
+            align-items: center;
             width: 100%;
-            max-width: 1200px;
         }
 
-        /* Affichage des prix et variation */
         .price-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #1c1c1c;
-            padding: 20px;
+            padding: 20px 30px;
             border-radius: 10px;
             margin-bottom: 20px;
             color: #58a6ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .price-info h2 {
             margin: 0;
             font-size: 24px;
+            font-weight: 500;
         }
 
         .price-info .price {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
         }
 
         .price-info .variation {
-            color: green;
+            color: #00ff00;
         }
 
         #chart_container {
             height: 500px;
             background-color: #1c1c1c;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             border-radius: 10px;
             width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         #tradingview_chart {
@@ -126,26 +141,28 @@
             width: 100%;
         }
 
-        /* Style pour le carnet d'ordres */
         .order-book {
             background-color: #1c1c1c;
             padding: 20px;
             border-radius: 10px;
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .order-book h3 {
             margin-top: 0;
             color: #58a6ff;
             font-size: 20px;
+            font-weight: 500;
         }
 
         .orders .order {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 15px 0;
             color: #ffffff;
+            border-bottom: 1px solid #303030;
         }
 
         .orders .order span {
@@ -153,7 +170,6 @@
             text-align: center;
         }
 
-        /* Style des boutons et formulaires */
         .actions-container {
             display: flex;
             justify-content: space-between;
@@ -164,12 +180,18 @@
         .actions-container button {
             background-color: #f0b90b;
             border: none;
-            padding: 15px 30px;
+            padding: 20px 40px;
             cursor: pointer;
             color: #121212;
             font-weight: bold;
             width: 48%;
             border-radius: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions-container button:hover {
+            background-color: #e0a707;
         }
 
         .withdrawal-form {
@@ -180,6 +202,7 @@
             border-radius: 10px;
             margin-top: 20px;
             width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .withdrawal-form h3 {
@@ -195,25 +218,35 @@
         .withdrawal-form button {
             background-color: #f0b90b;
             border: none;
-            padding: 15px;
+            padding: 15px 30px;
             cursor: pointer;
             color: #121212;
             font-weight: bold;
             align-self: center;
             border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .withdrawal-form button:hover {
+            background-color: #e0a707;
         }
 
         footer {
-            background-color: #1f1f1f;
+            background-color: #121212;
             color: #ffffff;
             text-align: center;
             padding: 20px 0;
+            margin-top: 40px;
+            font-size: 14px;
         }
 
-        /* Style réactif pour les appareils mobiles */
+        footer p {
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
             header, nav, .price-info, .order-book, .actions-container, .withdrawal-form {
-                padding: 10px;
+                padding: 15px;
                 margin-bottom: 15px;
             }
 
@@ -224,7 +257,7 @@
 
             .actions-container {
                 flex-direction: column;
-                align-items: center;
+                width: 100%;
             }
 
             .actions-container button {
@@ -252,7 +285,6 @@
             }
         }
     </style>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
     <!-- Sécurité de l'accès via numéro de téléphone -->
@@ -278,44 +310,43 @@
                     <span id="user-name">ADOM AKLESSO</span><br>
                     <span id="user-phone">228 90 29 86 29</span>
                 </div>
-                <button id="whatsapp-button">Contact WhatsApp</button>
+                <button id="whatsapp-button"><i class="fab fa-whatsapp"></i> WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
             </div>
         </nav>
     </header>
 
-    <!-- Section principale : Interface de trading -->
+    <!-- Section principale -->
     <main>
         <div class="trading-interface">
-            <section class="price-info">
-                <h2>BTC/USDT</h2>
-                <div class="price">67,969.20</div>
-                <div class="variation">+0.17%</div>
-            </section>
-            <section id="chart_container">
+            <div class="price-info">
+                <h2>Prix Actuel BTC/USDT</h2>
+                <span class="price">66,000.00</span>
+                <span class="variation">+0.5%</span>
+            </div>
+            <div id="chart_container">
                 <div id="tradingview_chart"></div>
-            </section>
-            <section class="order-book">
-                <h3>Order Book</h3>
+            </div>
+            <div class="order-book">
+                <h3>Carnet d'ordres</h3>
                 <div class="orders">
                     <div class="order">
-                        <span class="price">67,974.35</span>
-                        <span class="amount">0.19707 BTC</span>
-                        <span class="total">13,395.70515 USDT</span>
+                        <span class="price">66,000.00</span>
+                        <span class="quantity">1.5 BTC</span>
+                        <span class="total">99,000.00 USDT</span>
                     </div>
-                    <!-- Ajoutez des ordres supplémentaires ici -->
+                    <!-- Autres ordres peuvent être ajoutés ici -->
                 </div>
-            </section>
-            <section class="actions-container">
+            </div>
+            <div class="actions-container">
                 <button id="orange-money">Retirer via T-Money</button>
                 <button id="paypal">Retirer via PayPal</button>
-            </section>
-            <section class="withdrawal-form" id="withdrawal-form">
+            </div>
+            <div class="withdrawal-form" id="withdrawal-form">
                 <h3>Confirmer le retrait</h3>
                 <div class="form-info" id="withdrawal-info"></div>
                 <button id="confirm-withdrawal">Valider le Retrait</button>
-            </section>
-            <section class="error-message" id="error-message"></section>
+            </div>
         </div>
     </main>
 

